@@ -4,7 +4,8 @@ def get_prg(plaintext_size, k):
     size = len(k)
     k = list(k)
     keystream = ""
-    for z in range(0,plaintext_size):
+    
+    for n in range(plaintext_size):
         i = (i + 1)%size
         j = (j + ord(k[i]))%size
         temp = k[i]
