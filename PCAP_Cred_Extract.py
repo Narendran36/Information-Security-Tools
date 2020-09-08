@@ -13,7 +13,6 @@ def show_username_password():
     packets = rdpcap(recording_path)
     pattern = 'username=(.*)&password=([^\s]+)'
     for packet in packets:
-        pattern = 'username=(.*)&password=([^\s]+)'
         content = raw(packet[HTTP]).decode('ascii')
         match = re.search(pattern,content)
         if match:
